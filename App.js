@@ -11,6 +11,10 @@ import ListDonationsScreen from "./src/screens/ListDonationsScreen";
 
 import firebase from "@react-native-firebase/app";
 import "@react-native-firebase/firestore";
+import firebaseConfig from './src/services/firebaseConfig'; 
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Stack = createNativeStackNavigator();
 export default function App() {
